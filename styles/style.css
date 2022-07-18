@@ -15,8 +15,8 @@ main {
   background-color: #ffffff;
   width: 870px;
   padding: 30px;
-  border-radius: 5px; /*full container er upor radiouys apply korsi */
-  margin-top: 21px;  /*uporer section and nicher section er shathe gap dewar jonno its uses*/
+  border-radius: 5px; /*full container er upor radious apply korsi */
+  margin-top: 21px; /*uporer section and nicher section er shathe gap dewar jonno its uses*/
 }
 hr {
   border: 1px solid #d1d1d1;
@@ -79,4 +79,38 @@ top-blog-styles
   color: #562eff;
   font-size: 16px;
   text-decoration: none;
+}
+
+/*-------------------------
+      Courses Style 
+ -------------------------*/
+.courses {
+  display: grid; /*courses er bitore ja ase sob 1 row te chole jabe 3ta course ei jagula age column akare chilo */
+  grid-template-columns: repeat(3, 1fr); /*3-column number 1fr-space equal hobe protekta */
+  grid-column-gap: 24px; /*3ta course er column er moddhe gap 24px */
+}
+.course .course-banner img {
+  width: 224px; /*course er image er height width */
+  height: 104px;
+}
+.course-info {
+  display: flex; /*star rating and clock ke 1e line e niye aschi */
+  align-items: center; /*star rating and clock 1e line e 1 shathe thakbe */
+  justify-content: space-between; /*star rating 1 shathe thakbe but clock er age onek space chole ashbe */
+}
+.fa-star {
+  font-size: 12px; /*every star er font-size set korlam */
+}
+.fa-star.filled {
+  /*1ei class-name er bitore ekadikh class thakle space divo na*/
+  color: #ffc014; /*star gular color dilam */
+}
+.fa-star.empty {
+  /*1ei class-name er bitore ekadikh class thakle space divo na*/
+  color: #aeaeae; /*star last er tar  color dilam */
+}
+.course-duration {
+  color: #ff4a60;
+  border-radius: 5px;
+  font-size: 14.6913px;
 }
