@@ -86,7 +86,10 @@ top-blog-styles
  -------------------------*/
 .courses {
   display: grid; /*courses er bitore ja ase sob 1 row te chole jabe 3ta course ei jagula age column akare chilo */
-  grid-template-columns: repeat(3, 1fr); /*3-column number 1fr-space equal hobe protekta */
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /*3-column number 1fr-space equal hobe protekta */
   grid-column-gap: 24px; /*3ta course er column er moddhe gap 24px */
 }
 .course .course-banner img {
@@ -113,4 +116,44 @@ top-blog-styles
   color: #ff4a60;
   border-radius: 5px;
   font-size: 14.6913px;
+}
+
+/*-------------------------
+     Media Queries
+--------------------------*/
+/* Mobile Devices */
+@media only screen and (max-width: 688px) {
+  .container {
+    width: 100%; /*width bole dise tokhon dekhaise */
+  }
+  .players,
+  .blogs,
+  .courses {
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* eta dewar fole kisu dekhaite chilo na karon width e jamela chilo*/
+  }
+  .player,
+  .blog {
+    flex-direction: column;
+  }
+  .blog {
+    align-items: center;
+  }
+}
+
+/* Tablet-Devices */
+
+@media only screen and (min-width: 689px) and (max-width: 991px) {
+  .container {
+    width: 100%; /*eta dewate pic thik moto ashche */
+  }
+  .players,
+  .courses {
+    grid-template-columns: repeat(2, 1fr); /*thik moto pic ashe ni */
+  }
+  .blogs {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
